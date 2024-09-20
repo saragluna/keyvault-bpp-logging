@@ -1,1 +1,13 @@
-spring.application.name=demo
+spring:
+  cloud:
+    azure:
+      keyvault:
+        secret:
+          property-sources[0]:
+            enabled: true
+            endpoint: "https://kv-mul-keyvault-afvvh.vault.azure.net/"
+            secret-keys:
+              - ""
+logging:
+  level:
+    com.azure: debug
